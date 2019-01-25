@@ -12,9 +12,10 @@ restService.use(
 );
 
 restService.use(bodyParser.json());
-
+var sum;
 restService.post("/echo", function(req, res) {
-  var sum =
+  
+  sum =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.first_number
