@@ -18,7 +18,7 @@ restService.post("/echo", function(req, res) {
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.first_number
-      ? req.body.result.parameters.first_number + 1
+      ? req.body.result.parameters.first_number 
       : "Seems like some problem. Speak again.";
 
       // var second_number =
