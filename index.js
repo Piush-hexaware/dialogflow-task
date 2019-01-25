@@ -37,7 +37,7 @@ restService.post("/echo", function(req, res) {
   return res.json({
     speech: result,
     displayText: result,
-    source: "webhook-echo-sample"
+    source: "calc-app"
   });
 });
 restService.listen(process.env.PORT || 8000, function() {
