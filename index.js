@@ -10,21 +10,33 @@ restService.use(
     extended: true
   })
 );
-
 restService.use(bodyParser.json());
-var sum;
+var result;
 restService.post("/echo", function(req, res) {
   
-  sum =
+  if (req.body.result.parameters.addition == "add"){
+    result =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.first_number
       ? req.body.result.parameters.second_number + req.body.result.parameters.first_number
       : "Seems like some problem. Speak again.";
+  }
+
+  else if(req.body.result.parameters.subtraction == "sub")
+  {
+    result =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.first_number
+      ? req.body.result.parameters.number - req.body.result.parameters.number1
+      : "Seems like some problem. Speak again.";
+  }
+
 
   return res.json({
-    speech: sum,
-    displayText: sum,
+    speech: result,
+    displayText: result,
     source: "webhook-echo-sample"
   });
 });
