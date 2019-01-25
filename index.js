@@ -27,9 +27,9 @@ restService.post("/echo", function(req, res) {
       req.body.result.parameters.second_number
         ? req.body.result.parameters.second_number
         : "Seems like some problem. Speak again.";
-
+   var result = first_number + second_number;
   return res.json({
-    speech: first_number+second_number,
+    speech: result,
     displayText: speech,
     source: "webhook-echo-sample"
   });
