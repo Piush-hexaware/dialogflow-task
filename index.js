@@ -14,14 +14,25 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+  // var speech =
+  //   req.body.result &&
+  //   req.body.result.parameters &&
+  //   req.body.result.parameters.echoText
+  //     ? req.body.result.parameters.echoText
+  //     : "Seems like some problem. Speak again.";
+var result;
+  if(req.body.result )
+  {
+    var data=req.body.result.parameters.first_number;
+    var data1=req.body.result.parameters.second_number;
+    result = data + data1;
+  }
+  else{
+    result =  "sorry data is wrong";
+  }
+
   return res.json({
-    speech: 6,
+    speech: result,
     displayText: speech,
     source: "webhook-echo-sample"
   });
