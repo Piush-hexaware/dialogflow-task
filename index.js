@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech =
+  var sum =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.first_number
@@ -22,7 +22,7 @@ restService.post("/echo", function(req, res) {
       : "Seems like some problem. Speak again.";
 
   return res.json({
-    speech: speech,
+    speech: sum,
     displayText: speech,
     source: "webhook-echo-sample"
   });
