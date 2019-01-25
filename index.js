@@ -20,7 +20,7 @@ restService.post("/echo", function(req, res) {
     req.body.result.parameters &&
     req.body.result.parameters.first_number
       ? req.body.result.parameters.second_number + req.body.result.parameters.first_number
-      : "Seems like some problem. Speak again.";
+      : "Seems like some problem from addition. Speak again.";
   }
 
   else if(req.body.result.parameters.subtraction == "sub")
@@ -30,7 +30,7 @@ restService.post("/echo", function(req, res) {
     req.body.result.parameters &&
     req.body.result.parameters.first_number
       ? req.body.result.parameters.number - req.body.result.parameters.number1
-      : "Seems like some problem. Speak again.";
+      : "Seems like some problem for subtraction. Speak again.";
   }
 
 
