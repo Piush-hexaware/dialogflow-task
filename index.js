@@ -20,7 +20,18 @@ if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 console.log("here is the post request from dialogflow");
 console.log(req.body);
-console.log("parameter form dilaogflow" + req.body.queryResult.parameters['first_number']);
+console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
+console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
+console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
+
+
+var first_number = req.body.queryResult.parameters['first_number']
+var first_number = req.body.queryResult.parameters['second_number']
+
+console.log("additon of two number is " + first_number+second_number);
+console.log("subtraction of two number is " + second_number-first_number);
+
+
 let response =" ";
 let w ="my name is piyush";
 let responseObj={
