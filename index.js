@@ -26,7 +26,7 @@ console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addi
 
 
 var first_number = req.body.queryResult.parameters['first_number']
-var first_number = req.body.queryResult.parameters['second_number']
+var second_number = req.body.queryResult.parameters['second_number']
 
 console.log("additon of two number is " + first_number+second_number);
 console.log("subtraction of two number is " + second_number-first_number);
