@@ -29,8 +29,9 @@ var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 
 console.log("typr of first number is " + typeof first_number);
-console.log("additon of two number is " + first_number+second_number);
-console.log("subtraction of two number is " + second_number-first_number);
+console.log("typr of second number is " + typeof second_number);
+
+console.log("additon of two number is " + first_number + second_number);
 
 
 let response =" ";
