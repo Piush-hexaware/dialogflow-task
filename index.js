@@ -12,9 +12,10 @@ restService.use(
 );
 restService.use(bodyParser.json());
 var result;
+var responseObj;
+var response =" ";
 
 restService.post("/cal",function(req,res){
-
 console.log("received a post request");
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
@@ -29,21 +30,23 @@ console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addi
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 
-console.log("typr of first number is " + typeof first_number);
-console.log("typr of second number is " + typeof second_number);
+if (req.body.queryResult.parameters['addition'] == "add")
+{
+  result = first_number + second_number
+  responseObj={
+    "fulfillmentText" : response
+    ,"fulfillmentMessages":[{"text": { "text": ["addition of "+ first_number + "and " + second_number + "is "  + result] }} ]
+    ,"source":"" 
+  }
+}
 
-var result = first_number + second_number
-
-console.log("additon of two number is " + result);
-
-
-let response =" ";
-let w ="my name is piyush";
-let responseObj={
- 
-  "fulfillmentText" : response
-  ,"fulfillmentMessages":[{"text": { "text": [w] }} ]
-  ,"source":"" 
+else if(req.body.queryResult.parameters['subtraction'] == "sub"){
+  result = second_number - first_number ;
+  responseObj={
+    "fulfillmentText" : response
+    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + "and " + second_number + "is "  + result] }} ]
+    ,"source":"" 
+  }
 }
 console.log("response data " + responseObj);
 return res.json(responseObj);
