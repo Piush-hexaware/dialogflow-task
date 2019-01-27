@@ -35,7 +35,7 @@ if (req.body.queryResult.parameters['addition'] == "add")
   result = first_number + second_number
   responseObj={
     "fulfillmentText" : response
-    ,"fulfillmentMessages":[{"text": { "text": ["addition of "+ first_number + "and " + second_number + "is "  + result] }} ]
+    ,"fulfillmentMessages":[{"text": { "text": ["addition of "+ first_number + " and " + second_number + " is "  + result] }} ]
     ,"source":"" 
   }
 }
@@ -44,7 +44,7 @@ else if(req.body.queryResult.parameters['subtraction'] == "sub"){
   result = second_number - first_number ;
   responseObj={
     "fulfillmentText" : response
-    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + "and " + second_number + "is "  + result] }} ]
+    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + " from " + second_number + " is "  + result] }} ]
     ,"source":"" 
   }
 }
