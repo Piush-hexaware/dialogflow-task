@@ -24,7 +24,7 @@ console.log("parameter form dilaogflow " + req.body.queryResult.parameters['firs
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
 
-logger.log("here i am using logger");
+
 
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
