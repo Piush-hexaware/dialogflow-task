@@ -1,16 +1,16 @@
 {
-  "name": "webhook-echo-sample",
+  "name": "webhook-cal-sample",
   "version": "1.0.0",
-  "description": "Webhook echo sample",
+  "description": "Webhook cal sample",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "serve":"nodemon index.js"
+    "serve": "nodemon index.js"
   },
-  "author": "Sunil Syal",
+  "author": "",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "nodemon": "^1.18.9"
   }
 }

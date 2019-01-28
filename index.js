@@ -10,7 +10,9 @@ restService.use(
     extended: true
   })
 );
+
 restService.use(bodyParser.json());
+
 var result;
 var responseObj;
 var response =" ";
@@ -20,12 +22,11 @@ console.log("received a post request");
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 console.log("here is the post request from dialogflow");
-console.log(req.body);
+console.log("request body " + JSON.stringify(req.body));
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
-
-
+console.log("parameter form dilaogflow " + req.body.queryResult.parameters['subtraction']);
 
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
@@ -44,11 +45,25 @@ else if(req.body.queryResult.parameters['subtraction'] == "sub"){
   result = second_number - first_number ;
   responseObj={
     "fulfillmentText" : response
-    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + " from " + second_number + " is "  + result] }} ]
+    ,"fulfillmentMessages": [
+      {
+        "card": {
+          "title": "card title",
+          "subtitle": "card text",
+          "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
+          "buttons": [
+            {
+              "text": "button text",
+              "postback": "https://assistant.google.com/"
+            }
+          ]
+        }
+      }
+    ]
     ,"source":"" 
   }
 }
-console.log("response data " + responseObj);
+console.log("response data " + JSON.stringify(responseObj));
 return res.json(responseObj);
 
 });
