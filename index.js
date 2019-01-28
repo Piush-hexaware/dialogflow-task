@@ -47,20 +47,29 @@ else if(req.body.queryResult.parameters['subtraction'] == "sub"){
     "fulfillmentText" : response
     ,"fulfillmentMessages": [
       {
-        "card": {
-          "title": "card title",
-          "subtitle": "card text",
-          "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-          "buttons": [
+        "platform": "ACTIONS_ON_GOOGLE",
+        "listSelect": {
+          "title": "List of train",
+          "items": [
             {
-              "text": "button text",
-              "postback": "https://assistant.google.com/"
+              "info": {
+                "key": "mum"
+              },
+              "title": "mumai mail",
+              "image": {}
+            },
+            {
+              "info": {
+                "key": "chennai"
+              },
+              "title": "chennai mail",
+              "image": {}
             }
           ]
         }
       }
-    ]
-    ,"source":"" 
+    ],
+    "source":"" 
   }
 }
 console.log("response data " + JSON.stringify(responseObj));
