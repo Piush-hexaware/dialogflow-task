@@ -33,11 +33,22 @@ var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 if (req.body.queryResult.parameters['addition'] == "add")
 {
   result = first_number + second_number
-  responseObj={
-    "platform": "ACTIONS_ON_GOOGLE",
-    "fulfillmentText" : response
-    ,"fulfillmentMessages":[{"text": { "text": ["addition of "+ first_number + " and " + second_number + " is "  + result] }} ]
-    ,"source":"" 
+  responseObj=
+  {
+    "payload": {
+      "google": {
+        "expectUserResponse": true,
+        "richResponse": {
+          "items": [
+            {
+              "simpleResponse": {
+                "textToSpeech": "addition of "+ first_number + " and " + second_number + " is "  + result
+              }
+            }
+          ]
+        }
+      }
+    }
   }
 }
 
