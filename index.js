@@ -26,7 +26,6 @@ console.log("request body " + JSON.stringify(req.body));
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['subtraction']);
 
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
@@ -45,31 +44,8 @@ else if(req.body.queryResult.parameters['subtraction'] == "sub"){
   result = second_number - first_number ;
   responseObj={
     "fulfillmentText" : response
-    ,"fulfillmentMessages": [
-      {
-        "platform": "ACTIONS_ON_GOOGLE",
-        "listSelect": {
-          "title": "List of train",
-          "items": [
-            {
-              "info": {
-                "key": "mum"
-              },
-              "title": "mumai mail",
-              "image": {}
-            },
-            {
-              "info": {
-                "key": "chennai"
-              },
-              "title": "chennai mail",
-              "image": {}
-            }
-          ]
-        }
-      }
-    ],
-    "source":"" 
+    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + " from " + second_number + " is "  + result] }} ]
+    ,"source":"" 
   }
 }
 console.log("response data " + JSON.stringify(responseObj));
