@@ -34,6 +34,7 @@ if (req.body.queryResult.parameters['addition'] == "add")
 {
   result = first_number + second_number
   responseObj={
+    "platform": "ACTIONS_ON_GOOGLE",
     "fulfillmentText" : response
     ,"fulfillmentMessages":[{"text": { "text": ["addition of "+ first_number + " and " + second_number + " is "  + result] }} ]
     ,"source":"" 
@@ -43,6 +44,7 @@ if (req.body.queryResult.parameters['addition'] == "add")
 else if(req.body.queryResult.parameters['subtraction'] == "sub"){
   result = second_number - first_number ;
   responseObj={
+    "platform": "ACTIONS_ON_GOOGLE",
     "fulfillmentText" : response
     ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + " from " + second_number + " is "  + result] }} ]
     ,"source":"" 
