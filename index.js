@@ -26,11 +26,12 @@ console.log("request body " + JSON.stringify(req.body));
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
+console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
 
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
 var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 
-if (req.body.queryResult.parameters['addition'] == "add")
+if (req.body.queryResult.intent['displayName'] == "addition")
 {
   result = first_number + second_number
   responseObj=
@@ -52,13 +53,24 @@ if (req.body.queryResult.parameters['addition'] == "add")
   }
 }
 
-else if(req.body.queryResult.parameters['subtraction'] == "sub"){
+else if(req.body.queryResult.parameters['displayName'] == "subtraction"){
   result = second_number - first_number ;
-  responseObj={
-    "platform": "ACTIONS_ON_GOOGLE",
-    "fulfillmentText" : response
-    ,"fulfillmentMessages":[{"text": { "text": ["subtraction of "+ first_number + " from " + second_number + " is "  + result] }} ]
-    ,"source":"" 
+  responseObj=
+  {
+    "payload": {
+      "google": {
+        "expectUserResponse": true,
+        "richResponse": {
+          "items": [
+            {
+              "simpleResponse": {
+                "textToSpeech": "subtraction of "+ first_number + " from " + second_number + " is "  + result
+              }
+            }
+          ]
+        }
+      }
+    }
   }
 }
 console.log("response data " + JSON.stringify(responseObj));
