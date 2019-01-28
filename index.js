@@ -25,7 +25,6 @@ console.log("here is the post request from dialogflow");
 console.log("request body " + JSON.stringify(req.body));
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
 console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['addition']);
 console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
 
 var first_number = parseInt(req.body.queryResult.parameters['first_number'])
@@ -53,8 +52,9 @@ if (req.body.queryResult.intent['displayName'] == "addition")
   }
 }
 
-else if(req.body.queryResult.parameters['displayName'] == "subtraction"){
+else if(req.body.queryResult.intent['displayName'] == "subtraction"){
   result = second_number - first_number ;
+  
   responseObj=
   {
     "payload": {
