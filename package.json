@@ -1,16 +1,25 @@
 {
-  "name": "webhook-cal-sample",
+  "name": "dialogflow-task",
   "version": "1.0.0",
-  "description": "Webhook cal sample",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Piush-hexaware/dialogflow-task.git"
   },
   "author": "",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "nodemon": "^1.18.9"
-  }
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Piush-hexaware/dialogflow-task/issues"
+  },
+  "homepage": "https://github.com/Piush-hexaware/dialogflow-task#readme"
 }
