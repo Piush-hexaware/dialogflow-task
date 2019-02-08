@@ -218,7 +218,7 @@ restService.post("/subtraction",function(req,res){
 restService.post('/cal', function (req, res) {
 
   if(req.body.queryResult.intent['displayName']=="addition")
-  res.redirect(307,'/addition')
+  res.redirect(307,'https://calcl-app.herokuapp.com/addition')
 
   
   // var redirectUrl = 'http://localhost:8000/'+req.body.queryResult.intent['displayName']; 
