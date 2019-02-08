@@ -34,7 +34,6 @@ var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 // {
   result = first_number + second_number
   responseObj=
-
   {
     "payload": {
       "google": {
@@ -218,7 +217,7 @@ restService.post("/subtraction",function(req,res){
 restService.post('/cal', function (req, res) {
 
   if(req.body.queryResult.intent['displayName']=="addition")
-  res.redirect('/addition')
+  res.redirect('http://localhost:8000/'+req.body.queryResult.intent['displayName'])
   else
   res.redirect('/subtraction')
   
