@@ -167,6 +167,7 @@ restService.post("/cal",function(req,res){
             "items": [
               {
                 "simpleResponse": {
+                  "displayText": "Your pizza delivery **has** arrived*! Thank you for using _Pizza Bot!_",
                   "textToSpeech": "Your pizza delivery **has** arrived*! Thank you for using _Pizza Bot!_"
                 }
               }
