@@ -17,73 +17,73 @@ var result;
 var responseObj;
 var response =" ";
 
-restService.post("/addition",function(req,res){
-console.log("received a post request");
-if(!req.body) return res.sendStatus(400);
-res.setHeader('Content-Type','application/json');
-console.log("here is the post request from dialogflow");
-console.log("request body " + JSON.stringify(req.body));
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
-console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
+// restService.post("/addition",function(req,res){
+// console.log("received a post request");
+// if(!req.body) return res.sendStatus(400);
+// res.setHeader('Content-Type','application/json');
+// console.log("here is the post request from dialogflow");
+// console.log("request body " + JSON.stringify(req.body));
+// console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
+// console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
+// console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
 
-var first_number = parseInt(req.body.queryResult.parameters['first_number'])
-var second_number = parseInt(req.body.queryResult.parameters['second_number'])
+// var first_number = parseInt(req.body.queryResult.parameters['first_number'])
+// var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 
-// if (req.body.queryResult.intent['displayName'] == "addition")
-// {
-  result = first_number + second_number
-  responseObj=
+// // if (req.body.queryResult.intent['displayName'] == "addition")
+// // {
+//   result = first_number + second_number
+//   responseObj=
 
-  {
-    "payload": {
-      "google": {
-        "expectUserResponse": true,
-        "richResponse": {
-          "items": [
-            {
-              "simpleResponse": {
-                "textToSpeech": "Choose a item"
-              }
-            }
-          ]
-        },
-        "systemIntent": {
-          "intent": "actions.intent.OPTION",
-          "data": {
-            "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
-            "listSelect": {
-              "title": "Hello",
-              "items": [
-                {
-                  "optionInfo": {
-                    "key": "first title key"
-                  },
-                  "description": "first description",
-                  "image": {
-                    "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-                    "accessibilityText": "first alt"
-                  },
-                  "title": "first title"
-                },
-                {
-                  "optionInfo": {
-                    "key": "second"
-                  },
-                  "description": "second description",
-                  "image": {
-                    "url": "https://lh3.googleusercontent.com/Nu3a6F80WfixUqf_ec_vgXy_c0-0r4VLJRXjVFF_X_CIilEu8B9fT35qyTEj_PEsKw",
-                    "accessibilityText": "second alt"
-                  },
-                  "title": "second title"
-                }
-              ]
-            }
-          }
-        }
-      }
-    }
-  }
+//   {
+//     "payload": {
+//       "google": {
+//         "expectUserResponse": true,
+//         "richResponse": {
+//           "items": [
+//             {
+//               "simpleResponse": {
+//                 "textToSpeech": "Choose a item"
+//               }
+//             }
+//           ]
+//         },
+//         "systemIntent": {
+//           "intent": "actions.intent.OPTION",
+//           "data": {
+//             "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
+//             "listSelect": {
+//               "title": "Hello",
+//               "items": [
+//                 {
+//                   "optionInfo": {
+//                     "key": "first title key"
+//                   },
+//                   "description": "first description",
+//                   "image": {
+//                     "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+//                     "accessibilityText": "first alt"
+//                   },
+//                   "title": "first title"
+//                 },
+//                 {
+//                   "optionInfo": {
+//                     "key": "second"
+//                   },
+//                   "description": "second description",
+//                   "image": {
+//                     "url": "https://lh3.googleusercontent.com/Nu3a6F80WfixUqf_ec_vgXy_c0-0r4VLJRXjVFF_X_CIilEu8B9fT35qyTEj_PEsKw",
+//                     "accessibilityText": "second alt"
+//                   },
+//                   "title": "second title"
+//                 }
+//               ]
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
 
 
 
@@ -131,19 +131,19 @@ var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 //     }
 //   }
 // }
-console.log("response data " + JSON.stringify(responseObj));
-return res.json(responseObj);
+// console.log("response data " + JSON.stringify(responseObj));
+// return res.json(responseObj);
 
-});
-
-
+// });
 
 
 
 
 
 
-restService.post("/subtraction",function(req,res){
+
+
+restService.post("/cal",function(req,res){
   console.log("received a post request");
   if(!req.body) return res.sendStatus(400);
   res.setHeader('Content-Type','application/json');
@@ -156,7 +156,7 @@ restService.post("/subtraction",function(req,res){
   var first_number = parseInt(req.body.queryResult.parameters['first_number'])
   var second_number = parseInt(req.body.queryResult.parameters['second_number'])
   
-    result = second_number - first_number ;
+    result = second_number + first_number ;
     
     responseObj=
     {
@@ -167,7 +167,7 @@ restService.post("/subtraction",function(req,res){
             "items": [
               {
                 "simpleResponse": {
-                  "textToSpeech": "subtraction of "+ first_number + " from " + second_number + " is "  + result
+                  "textToSpeech": "Your pizza delivery *has arrived*!\nThank you for using _Pizza Bot!_"
                 }
               }
             ]
@@ -212,21 +212,6 @@ restService.post("/subtraction",function(req,res){
 //   });
 // });
 
-
-
-
-restService.post('/cal', function (req, res) {
-
-  if(req.body.queryResult.intent['displayName']=="addition")
-  res.redirect(307,'https://calcl-app.herokuapp.com/addition')
-
-  
-  // var redirectUrl = 'http://localhost:8000/'+req.body.queryResult.intent['displayName']; 
-  // console.log('redirectUrl',redirectUrl)
-  // //console.log('redirectUrl',redirectUrl);
-  //  res.redirect(307,'/addition');			
-  // console.log("url redirected");
-});
 
 
 restService.listen(process.env.PORT || 8000, function() {
