@@ -136,23 +136,17 @@ var response =" ";
 
 // });
 
-
-
-
-
-
-
-
 restService.post("/cal",function(req,res){
 
-  console.log("received a post request",req.body);
+  // console.log("received a post request",req.body);
   if(!req.body) return res.sendStatus(400);
   res.setHeader('Content-Type','application/json');
-  console.log("here is the post request from dialogflow");
-  console.log("request body " + JSON.stringify(req.body));
-  console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
-  console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
-  console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
+  // console.log("here is the post request from dialogflow");
+  // console.log("request body " + JSON.stringify(req.body));
+  // console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
+  // console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
+  // console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
+  console.log("context data ",req.body.contexts)
   
   var first_number = parseInt(req.body.queryResult.parameters['first_number'])
   var second_number = parseInt(req.body.queryResult.parameters['second_number'])
