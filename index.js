@@ -264,7 +264,7 @@ restService.post("/cal",function(req,res){
                         "url": "https://google.com"
                       },
                       "description": "Description of item 10",
-                      "footer": "Item 10 footer",
+                      "footer": "Item 10 footer \n Item 23 footer",
                       "image": {
                         "url": "https://developers.google.com/actions/assistant.png",
                         "accessibilityText": "Google Assistant Bubbles"
@@ -287,7 +287,7 @@ restService.post("/cal",function(req,res){
                         "url": "https://google.com"
                       },
                       "description": "Description of item 13",
-                      "footer": "Item 13 footer",
+                      "footer": "Item 13 footer ",
                       "image": {
                         "url": "https://developers.google.com/actions/assistant.png",
                         "accessibilityText": "Google Assistant Bubbles"
