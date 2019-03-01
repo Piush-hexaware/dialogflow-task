@@ -161,6 +161,11 @@ restService.post("/cal",function(req,res){
           "richResponse": {
             "items": [
               {
+                "simpleResponse": {
+                  "textToSpeech": "Choose a item"
+                }
+              },
+              {
                 "carouselBrowse": {
                   "items": [
                     {
