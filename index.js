@@ -263,8 +263,8 @@ restService.post("/cal",function(req,res){
                       "openUrlAction": {
                         "url": "https://google.com"
                       },
-                      "description": "Description of item 10",
-                      "footer": "Item 10 footer \n Item 23 footer",
+                      "description": "**Description** of item 10 \n Testing next",
+                      "footer": "**Item 10 footer**",
                       "image": {
                         "url": "https://developers.google.com/actions/assistant.png",
                         "accessibilityText": "Google Assistant Bubbles"
