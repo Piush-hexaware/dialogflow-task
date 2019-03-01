@@ -17,76 +17,7 @@ var result;
 var responseObj;
 var response =" ";
 
-<<<<<<< HEAD
-restService.post("/cal",function(req,res){
-console.log("received a post request");
-if(!req.body) return res.sendStatus(400);
-res.setHeader('Content-Type','application/json');
-console.log("here is the post request from dialogflow");
-console.log("request body " + JSON.stringify(req.body));
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
-console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
-console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
-
-var first_number = parseInt(req.body.queryResult.parameters['first_number'])
-var second_number = parseInt(req.body.queryResult.parameters['second_number'])
-
-// if (req.body.queryResult.intent['displayName'] == "addition")
-// {
-  result = first_number + second_number
-  responseObj=
-
-  {
-    "payload": {
-      "google": {
-        "expectUserResponse": true,
-        "richResponse": {
-          "items": [
-            {
-              "simpleResponse": {
-                "textToSpeech": "Choose a item"
-              }
-            }
-          ]
-        },
-        "systemIntent": {
-          "intent": "actions.intent.OPTION",
-          "data": {
-            "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
-            "listSelect": {
-              "title": "Hello",
-              "items": [
-                {
-                  "optionInfo": {
-                    "key": "first title key"
-                  },
-                  "description": "first description",
-                  "image": {
-                    "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-                    "accessibilityText": "first alt"
-                  },
-                  "title": "first title"
-                },
-                {
-                  "optionInfo": {
-                    "key": "second"
-                  },
-                  "description": "second description",
-                  "image": {
-                    "url": "https://lh3.googleusercontent.com/Nu3a6F80WfixUqf_ec_vgXy_c0-0r4VLJRXjVFF_X_CIilEu8B9fT35qyTEj_PEsKw",
-                    "accessibilityText": "second alt"
-                  },
-                  "title": "second title"
-                }
-              ]
-            }
-          }
-        }
-      }
-    }
-  }
-=======
-// restService.post("/addition",function(req,res){
+// restService.post("/cal",function(req,res){
 // console.log("received a post request");
 // if(!req.body) return res.sendStatus(400);
 // res.setHeader('Content-Type','application/json');
@@ -153,7 +84,6 @@ var second_number = parseInt(req.body.queryResult.parameters['second_number'])
 //       }
 //     }
 //   }
->>>>>>> 6d33937519e0d3620e2dc24e39cb16aae3a0a237
 
 
 
@@ -285,7 +215,6 @@ restService.post("/cal",function(req,res){
 
 
 
-<<<<<<< HEAD
 
 // restService.post('/cal', function (req, res) {
 
@@ -301,8 +230,6 @@ restService.post("/cal",function(req,res){
 // });
 
 
-=======
->>>>>>> 6d33937519e0d3620e2dc24e39cb16aae3a0a237
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
