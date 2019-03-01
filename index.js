@@ -257,6 +257,53 @@ restService.post("/cal",function(req,res){
                         "url": "https://developers.google.com/actions/assistant.png",
                         "accessibilityText": "Google Assistant Bubbles"
                       }
+                    },
+                    {
+                      "title": "Title of item 2",
+                      "openUrlAction": {
+                        "url": "https://google.com"
+                      },
+                      "description": "Description of item 2",
+                      "footer": "Item 2 footer",
+                      "image": {
+                        "url": "https://developers.google.com/actions/assistant.png",
+                        "accessibilityText": "Google Assistant Bubbles"
+                      }
+                    },
+                    {
+                      "title": "Title of item 2",
+                      "openUrlAction": {
+                        "url": "https://google.com"
+                      },
+                      "description": "Description of item 2",
+                      "footer": "Item 2 footer",
+                      "image": {
+                        "url": "https://developers.google.com/actions/assistant.png",
+                        "accessibilityText": "Google Assistant Bubbles"
+                      }
+                    },{
+                      "title": "Title of item 2",
+                      "openUrlAction": {
+                        "url": "https://google.com"
+                      },
+                      "description": "Description of item 2",
+                      "footer": "Item 2 footer",
+                      "image": {
+                        "url": "https://developers.google.com/actions/assistant.png",
+                        "accessibilityText": "Google Assistant Bubbles"
+                      }
+                    }
+                    ,{
+                      "title": "Title of item 2",
+                      "openUrlAction": {
+                        "url": "https://google.com"
+                      },
+                      "description": "Description of item 2",
+                      "footer": "Item 2 footer",
+                      "image": {
+                        "url": "https://developers.google.com/actions/assistant.png",
+                        "accessibilityText": "Google Assistant Bubbles"
+                      }
                     }
                   ]
                 }
