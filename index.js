@@ -153,8 +153,7 @@ restService.post("/cal",function(req,res){
   
     result = second_number + first_number ;
     
-    responseObj=
-    {
+    responseObj={
       "payload": {
         "google": {
           "expectUserResponse": true,
@@ -164,107 +163,45 @@ restService.post("/cal",function(req,res){
                 "simpleResponse": {
                   "textToSpeech": "Choose a item"
                 }
-              },
-              {
-                "carouselBrowse": {
-                  "items": [
-                    {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    },
-                    {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }, {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }, {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }, {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }, {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }, {
-                      "title": "ENGLLIT 8044",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Poetic Language \n 4 units \n Graded - A",
-                      "footer": "16 Grade points",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }
-                  ]
-                }
               }
             ]
           },
-          "userStorage": "{\"data\":{}}"
-        }
-      },
-      "outputContexts": [
-        {
-          "name": "projects/temperatureconvertersample/agent/sessions/518488a5-09f6-4a36-8950-942f595b70b8/contexts/_actions_on_google",
-          "lifespanCount": 99,
-          "parameters": {
-            "data": "{}"
+          "systemIntent": {
+            "intent": "actions.intent.OPTION",
+            "data": {
+              "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
+              "carouselSelect": {
+                "items": [
+                  {
+                    "optionInfo": {
+                      "key": "first title"
+                    },
+                    "description": "**Poetic Language** \n 4 units \n Graded - A",
+                    "image": {
+                      "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+                      "accessibilityText": "first alt"
+                    },
+                    "title": "first title"
+                  },
+                  {
+                    "optionInfo": {
+                      "key": "second"
+                    },
+                    "description": "second description",
+                    "image": {
+                      "url": "https://lh3.googleusercontent.com/Nu3a6F80WfixUqf_ec_vgXy_c0-0r4VLJRXjVFF_X_CIilEu8B9fT35qyTEj_PEsKw",
+                      "accessibilityText": "second alt"
+                    },
+                    "title": "second title"
+                  }
+                ]
+              }
+            }
           }
         }
-      ]
+      }
     }
+   
   
   console.log("response data " + JSON.stringify(responseObj));
   return res.json(responseObj);
