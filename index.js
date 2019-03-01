@@ -144,7 +144,8 @@ var response =" ";
 
 
 restService.post("/cal",function(req,res){
-  console.log("received a post request");
+
+  console.log("received a post request",req.body);
   if(!req.body) return res.sendStatus(400);
   res.setHeader('Content-Type','application/json');
   console.log("here is the post request from dialogflow");
