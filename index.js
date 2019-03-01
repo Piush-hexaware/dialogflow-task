@@ -17,7 +17,7 @@ var result;
 var responseObj;
 var response =" ";
 
-restService.post("/addition",function(req,res){
+restService.post("/cal",function(req,res){
 console.log("received a post request");
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
@@ -215,18 +215,18 @@ restService.post("/subtraction",function(req,res){
 
 
 
-restService.post('/cal', function (req, res) {
+// restService.post('/cal', function (req, res) {
 
-  if(req.body.queryResult.intent['displayName']=="addition")
-  res.redirect(307,'https://calcl-app.herokuapp.com/addition')
+//   if(req.body.queryResult.intent['displayName']=="addition")
+//   res.redirect(307,'https://calcl-app.herokuapp.com/addition')
 
   
-  // var redirectUrl = 'http://localhost:8000/'+req.body.queryResult.intent['displayName']; 
-  // console.log('redirectUrl',redirectUrl)
-  // //console.log('redirectUrl',redirectUrl);
-  //  res.redirect(307,'/addition');			
-  // console.log("url redirected");
-});
+//   // var redirectUrl = 'http://localhost:8000/'+req.body.queryResult.intent['displayName']; 
+//   // console.log('redirectUrl',redirectUrl)
+//   // //console.log('redirectUrl',redirectUrl);
+//   //  res.redirect(307,'/addition');			
+//   // console.log("url redirected");
+// });
 
 
 restService.listen(process.env.PORT || 8000, function() {
