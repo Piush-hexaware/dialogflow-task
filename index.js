@@ -169,15 +169,8 @@ restService.post("/cal",function(req,res){
                   "items": [
                     {
                       "title": "Title of item 1",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
                       "description": "Description of item 1",
                       "footer": "Item 1 footer",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
                     },
                     {
                       "title": "Title of item 2",
