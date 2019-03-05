@@ -175,10 +175,7 @@ restService.post("/cal",function(req,res){
                       },
                       "description": "Description of item 1",
                       "footer": "Item 1 footer",
-                      "image": {
-                        "url": "",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
+                      "image":""
                     },
                     {
                       "title": "Title of item 2",
