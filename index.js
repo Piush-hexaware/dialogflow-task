@@ -154,7 +154,6 @@ restService.post("/cal",function(req,res){
     result = second_number + first_number ;
     
     responseObj= {
-
       "payload": {
         "google": {
           "expectUserResponse": true,
@@ -171,11 +170,14 @@ restService.post("/cal",function(req,res){
                     {
                       "title": "Title of item 1",
                       "openUrlAction": {
-                        "url": ""
+                        "url": "https://google.com"
                       },
                       "description": "Description of item 1",
                       "footer": "Item 1 footer",
-                      "image":""
+                      "image": {
+                        "url": "https://developers.google.com/actions/assistant.png",
+                        "accessibilityText": "Google Assistant Bubbles"
+                      }
                     },
                     {
                       "title": "Title of item 2",
