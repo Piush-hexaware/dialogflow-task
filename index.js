@@ -154,11 +154,17 @@ restService.post("/cal",function(req,res){
     result = second_number + first_number ;
     
     responseObj= {
+
       "payload": {
         "google": {
           "expectUserResponse": true,
           "richResponse": {
             "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Choose a item"
+                }
+              },
               {
                 "carouselBrowse": {
                   "items": [
