@@ -137,7 +137,7 @@ var response =" ";
 // });
 
 restService.post("/cal",function(req,res){
-
+console.log("context data ",JSON.stringify(req.body))
   // console.log("received a post request",req.body);
   if(!req.body) return res.sendStatus(400);
   res.setHeader('Content-Type','application/json');
