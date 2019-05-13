@@ -153,26 +153,28 @@ console.log("context data ",JSON.stringify(req.body))
   
    // result = second_number + first_number ;
     
-    responseObj= {
-  "payload": {
-    "google": {
-      "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "this is a simple response"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
+//     responseObj= {
+//   "payload": {
+//     "google": {
+//       "expectUserResponse": true,
+//       "richResponse": {
+//         "items": [
+//           {
+//             "simpleResponse": {
+//               "textToSpeech": "this is a simple response"
+//             }
+//           }
+//         ]
+//       }
+//     }
+//   }
+// }
    
   
-  console.log("response data " + JSON.stringify(responseObj));
-  return res.json(responseObj);
+ // console.log("response data " + JSON.stringify(responseObj));
+  return res.json(speech: "this is a simple response",
+                  displayText: "this is a simple response",
+                  source: "testWhatsp");
   
   });
   
