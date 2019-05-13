@@ -172,9 +172,9 @@ console.log("context data ",JSON.stringify(req.body))
    
   
  // console.log("response data " + JSON.stringify(responseObj));
-  return res.json(speech: "this is a simple response",
+  return res.json({speech: "this is a simple response",
                   displayText: "this is a simple response",
-                  source: "testWhatsp");
+                  source: "testWhatsp"});
   
   });
   
