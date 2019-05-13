@@ -146,62 +146,29 @@ console.log("context data ",JSON.stringify(req.body))
   // console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
   // console.log("parameter form dilaogflow " + req.body.queryResult.parameters['second_number']);
   // console.log("intent name form dilaogflow " + req.body.queryResult.intent['displayName']);
-  console.log("context data ",JSON.stringify(req.body))
+  //console.log("context data ",JSON.stringify(req.body))
 
-  var first_number = parseInt(req.body.queryResult.parameters['first_number'])
-  var second_number = parseInt(req.body.queryResult.parameters['second_number'])
+  //var first_number = parseInt(req.body.queryResult.parameters['first_number'])
+  //var second_number = parseInt(req.body.queryResult.parameters['second_number'])
   
     result = second_number + first_number ;
     
     responseObj= {
-      "payload": {
-        "google": {
-          "expectUserResponse": true,
-          "richResponse": {
-            "items": [
-              {
-                "simpleResponse": {
-                  "textToSpeech": "Choose a item"
-                }
-              },
-              {
-                "carouselBrowse": {
-                  "items": [
-                    {
-                      "title": "Title of item 1",
-                      "description": "Description of item 1",
-                      "footer": "Item 1 footer",
-                    },
-                    {
-                      "title": "Title of item 2",
-                      "openUrlAction": {
-                        "url": "https://google.com"
-                      },
-                      "description": "Description of item 2",
-                      "footer": "Item 2 footer",
-                      "image": {
-                        "url": "https://developers.google.com/actions/assistant.png",
-                        "accessibilityText": "Google Assistant Bubbles"
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          },
-          "userStorage": "{\"data\":{}}"
-        }
-      },
-      "outputContexts": [
-        {
-          "name": "projects/temperatureconvertersample/agent/sessions/518488a5-09f6-4a36-8950-942f595b70b8/contexts/_actions_on_google",
-          "lifespanCount": 99,
-          "parameters": {
-            "data": "{}"
+  "payload": {
+    "google": {
+      "expectUserResponse": true,
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "this is a simple response"
+            }
           }
-        }
-      ]
+        ]
+      }
     }
+  }
+}
    
   
   console.log("response data " + JSON.stringify(responseObj));
