@@ -151,7 +151,7 @@ console.log("context data ",JSON.stringify(req.body))
   //var first_number = parseInt(req.body.queryResult.parameters['first_number'])
   //var second_number = parseInt(req.body.queryResult.parameters['second_number'])
   
-    result = second_number + first_number ;
+   // result = second_number + first_number ;
     
     responseObj= {
   "payload": {
