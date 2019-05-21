@@ -180,6 +180,9 @@ console.log("data ",JSON.stringify(req.body))
   
 
 
+restService.post("/redirect",function(req,res){
+console.log(" redirect data ",JSON.stringify(req.body)) 
+  });
 
 
 
