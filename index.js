@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 
 
 restService.get("/authorize",function(req,res){
-console.log("authorize call",JSON.stringify(req.body))
+console.log("authorize call",JSON.stringify(req.body.client_id))
   });
   
 
