@@ -137,10 +137,10 @@ var response =" ";
 // });
 
 restService.post("/cal",function(req,res){
-console.log("context data ",JSON.stringify(req.body))
+console.log("data ",JSON.stringify(req.body))
   // console.log("received a post request",req.body);
-  if(!req.body) return res.sendStatus(400);
-  res.setHeader('Content-Type','application/json');
+//   if(!req.body) return res.sendStatus(400);
+//   res.setHeader('Content-Type','application/json');
   // console.log("here is the post request from dialogflow");
   // console.log("request body " + JSON.stringify(req.body));
   // console.log("parameter form dilaogflow " + req.body.queryResult.parameters['first_number']);
@@ -172,9 +172,9 @@ console.log("context data ",JSON.stringify(req.body))
    
   
  // console.log("response data " + JSON.stringify(responseObj));
-  return res.json({speech: "this is a simple response",
-                  displayText: "this is a simple response",
-                  source: "twilio"});
+//   return res.json({speech: "this is a simple response",
+//                   displayText: "this is a simple response",
+//                   source: "twilio"});
   
   });
   
