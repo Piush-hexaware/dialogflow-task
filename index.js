@@ -65,7 +65,7 @@ jwtClient.authorize((authErr, tokens) => {
     },
     'json': true,
     'body': {
-      {'customPushMessage': notification, 'isInSandbox': true}
+      'customPushMessage': notification, 'isInSandbox': true
     },
   }, (reqErr, httpResponse, body) => {
      console.log("token is " + tokens.access_token)
