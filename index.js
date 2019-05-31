@@ -48,7 +48,7 @@ if(req.body.queryResult.queryText == "GOOGLE_ASSISTANT_WELCOME") {
 }
   else {
   {
-  responseObj="payload": {
+  responseObj={"payload": {
     "google": {
       "expectUserResponse": true,
       "systemIntent": {
@@ -64,7 +64,7 @@ if(req.body.queryResult.queryText == "GOOGLE_ASSISTANT_WELCOME") {
       }
     }
   }
-}
+}}
   }
 console.log("response data " + JSON.stringify(responseObj));
 return res.json(responseObj);
