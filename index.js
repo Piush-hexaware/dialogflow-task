@@ -53,7 +53,7 @@ jwtClient.authorize((authErr, tokens) => {
     },
     target: {
       userId: 'ABwppHHUnh9aX0b1Cz3k2itm34PUA3GHyDlNlstR269hqOv6yxrWYxazaPGYiqp42MqY_NrTPEw_g2j5GWc9fIEs',
-      intent:  "Default Welcome Intent",
+      intent:  "notify",
       // Expects a IETF BCP-47 language code (i.e. en-US)
       locale: 'en-GB'
     }
