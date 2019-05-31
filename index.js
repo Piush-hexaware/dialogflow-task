@@ -17,7 +17,7 @@ restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
-responseObj=
+let responseObj=
 {
   "payload": {
     "google": {
