@@ -59,7 +59,7 @@ jwtClient.authorize((authErr, tokens) => {
     }
   };
 
-  request.post('https://actions.googleapis.com/v2/conversations:send', {
+  request.post('https://actions.googleapis.com/v2/conversations:send?key=AIzaSyDP2SYd-8h31rsRaQTknudJp7XvQDoNOWw ', {
     'auth': {
       'bearer': tokens.access_token,
     },
