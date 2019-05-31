@@ -56,10 +56,10 @@ jwtClient.authorize((authErr, tokens) => {
       intent:  {
       "name": "projects/notification-c32a2/agent/intents/cebbbf50-9965-4b82-8b5c-396fdf54026c",
       "displayName": "Default Welcome Intent - custom"
-    }
+    },
       // Expects a IETF BCP-47 language code (i.e. en-US)
       locale: 'en-GB'
-    },
+    }
   };
 
   request.post('https://actions.googleapis.com/v2/conversations:send', {
