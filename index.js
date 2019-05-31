@@ -46,7 +46,7 @@ jwtClient.authorize((authErr, tokens) => {
     },
     target: {
       userId: 'ABwppHHUnh9aX0b1Cz3k2itm34PUA3GHyDlNlstR269hqOv6yxrWYxazaPGYiqp42MqY_NrTPEw_g2j5GWc9fIEs',
-      intent: 'projects/notification-c32a2/agent/intents/060fd5df-a77f-4b32-a413-5c73b0e15eea',
+      intent: 'actions.intent.TEXT',
       // Expects a IETF BCP-47 language code (i.e. en-US)
       locale: 'en-GB'
     },
@@ -61,6 +61,7 @@ jwtClient.authorize((authErr, tokens) => {
       'customPushMessage': notification
     },
   }, (reqErr, httpResponse, body) => {
+     console.log("token is " + tokens.access_token)
     console.log("status code is "+httpResponse.statusCode + ': ' + httpResponse.statusMessage);
   });
 });
