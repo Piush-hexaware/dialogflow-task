@@ -13,7 +13,8 @@
   "author": "",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "google-auth-library":"^4.1.0"
   },
   "license": "ISC",
   "bugs": {
