@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 
 const {JWT} = require('google-auth-library');
 const request = require('request');
-const key = require(PATH_TO_KEY);
 const restService = express();
 
 
