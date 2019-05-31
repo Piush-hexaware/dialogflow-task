@@ -46,6 +46,26 @@ if(req.body.queryResult.queryText == "GOOGLE_ASSISTANT_WELCOME") {
     }
   }
 }
+  else {
+  {
+  responseObj="payload": {
+    "google": {
+      "expectUserResponse": true,
+      "systemIntent": {
+        "intent": "actions.intent.PERMISSION",
+        "data": {
+          "@type": "type.googleapis.com/google.actions.v2.PermissionValueSpec",
+          "optContext": "To deliver your order",
+          "permissions": [
+            "NAME",
+            "DEVICE_PRECISE_LOCATION"
+          ]
+        }
+      }
+    }
+  }
+}
+  }
 console.log("response data " + JSON.stringify(responseObj));
 return res.json(responseObj);
 
