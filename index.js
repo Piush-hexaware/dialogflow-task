@@ -3,7 +3,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require('request');
-
+const {google} = require("googleapis");
+const key = require("./daily-news-codelab-9b75c23bcafa.json");
 const restService = express();
 
 restService.use(
@@ -13,12 +14,45 @@ restService.use(
 );
 restService.use(bodyParser.json());
 
+const jwtClient = new google.auth.JWT(
+  key.client_email,
+  null,
+  key.private_key,
+  [
+      "https://www.googleapis.com/auth/actions.fulfillment.conversation"
+  ],
+  null
+);
+
 restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 let responseObj= null;
 if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
+  jwtClient.authorize((err, tokens) => {
+    const options = {
+        userNotification: {
+            title: process.argv[2]
+        },
+        target: {
+            userId: "ABwppHHIFh3cJwbnCCyBxeh4vDAXL50fe5Hk1hDkl1RVh38oT488fs-FJD461eNQCime1POSg0nHytGY02frf0lE-OeeSsKi",
+            intent: "Latest News",
+            locale: "en-US"
+        }
+    };
+    request.post("https://actions.googleapis.com/v2/conversations:send", {
+        auth: {
+            "bearer": tokens.access_token
+        },
+        json: true,
+        body: {
+            customPushMessage: options
+       }
+    }, (err, response, body) => {
+       console.log("status code : "+response.statusCode + "\nstatus : " + response.statusMessage);
+    });
+});
   responseObj=  {"payload": {
     "google": {
       "expectUserResponse": true,
@@ -39,22 +73,46 @@ if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
 }
 } else if (req.body.queryResult.intent.displayName == "Finish Push Notifications Setup"){
   console.log(" **userID**" + req.body.originalDetectIntentRequest.payload.user.userId)
-  responseObj= {
-    "payload": {
-      "google": {
-        "expectUserResponse": true,
-        "richResponse": {
-          "items": [
-            {
-              "simpleResponse": {
-                "textToSpeech": "Thank you ! "
+  
+jwtClient.authorize((err, tokens) => {
+  const options = {
+      userNotification: {
+          title: "Hi I am Piyush !"
+      },
+      target: {
+          userId: req.body.originalDetectIntentRequest.payload.user.userId,
+          intent: "Latest News",
+          locale: "en-US"
+      }
+  };
+  request.post("https://actions.googleapis.com/v2/conversations:send", {
+      auth: {
+          "bearer": tokens.access_token
+      },
+      json: true,
+      body: {
+          customPushMessage: options
+     }
+  }, (err, response, body) => {
+     console.log("status code : "+response.statusCode + "\nstatus : " + response.statusMessage);
+     responseObj= {
+      "payload": {
+        "google": {
+          "expectUserResponse": true,
+          "richResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Thank you ! you will get notification"
+                }
               }
-            }
-          ]
+            ]
+          }
         }
       }
     }
-  }
+  });
+});
 }
 
 console.log("response data " + JSON.stringify(responseObj));
