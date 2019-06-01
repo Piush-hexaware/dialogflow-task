@@ -22,13 +22,14 @@ res.setHeader('Content-Type','application/json');
     "google": {
       "expectUserResponse": true,
       "systemIntent": {
-        "intent": "Latest News",
+        "intent": "actions.intent.PERMISSION",
         "data": {
           "@type": "type.googleapis.com/google.actions.v2.PermissionValueSpec",
           "optContext": "I can send you alerts. Would you like that?",
           "permissions": [
             "NAME",
-            "DEVICE_PRECISE_LOCATION"
+            "DEVICE_PRECISE_LOCATION",
+            "UNSPECIFIED_PERMISSION"
           ]
         }
       }
