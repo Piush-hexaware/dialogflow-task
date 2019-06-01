@@ -47,7 +47,7 @@ if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
           "items": [
             {
               "simpleResponse": {
-                "textToSpeech": "Thank you ! " + req.body.originalDetectIntentRequest.payload.user.profile.displayName
+                "textToSpeech": "Thank you ! "
               }
             }
           ]
@@ -56,6 +56,7 @@ if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
     }
   }
 }
+
 console.log("response data " + JSON.stringify(responseObj));
 return res.json(responseObj);
 });
