@@ -17,8 +17,9 @@ restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
 if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
-
- let  responseObj=  {"payload": {
+let responseObj= null;
+if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
+  responseObj=  {"payload": {
     "google": {
       "expectUserResponse": true,
       "systemIntent": {
@@ -30,6 +31,25 @@ res.setHeader('Content-Type','application/json');
             "NAME",
             "DEVICE_PRECISE_LOCATION",
             "UNSPECIFIED_PERMISSION"
+          ]
+        }
+      }
+    }
+  }
+}
+} else if (req.body.queryResult.intent.displayName == "Finish Push Notifications Setup"){
+  console.log(" **userID**" + req.body.originalDetectIntentRequest.payload.user.userId)
+  responseObj= {
+    "payload": {
+      "google": {
+        "expectUserResponse": true,
+        "richResponse": {
+          "items": [
+            {
+              "simpleResponse": {
+                "textToSpeech": "Thank you ! " + req.body.originalDetectIntentRequest.payload.user.profile.displayName
+              }
+            }
           ]
         }
       }
