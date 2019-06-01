@@ -28,8 +28,7 @@ res.setHeader('Content-Type','application/json');
           "optContext": "I can send you alerts. Would you like that?",
           "permissions": [
             "NAME",
-            "DEVICE_PRECISE_LOCATION",
-            "UNSPECIFIED_PERMISSION"
+            "DEVICE_PRECISE_LOCATION"
           ]
         }
       }
