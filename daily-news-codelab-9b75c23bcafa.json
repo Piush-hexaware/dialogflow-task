@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "daily-news-codelab-38c48",
+  "private_key_id": "9b75c23bcafabf24ad7fbfc75b045debf99a49ad",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcJ/NrfAqzyrMb\nXn1TuUn2twSytx/ZXP/huL8eYeh/25J19cjY1AdPGTl2vNmDp0GWQZTvK4mGHzSy\nRcmHz54NJLgJnnA+hFSL5+b0RhxxSFAqtQ03ad5FT5JUA1uRC3q53kqCt+YbYydm\nl8iS7ueUqesjXdHB1EB7lW3D9z/ZzYxBzVJgbq+tHKi1eQ75dvFO4fB9dznOJgv9\nFlaNYpYgsMybxGiPCry9pvP+IDxBq5199Ngd2uClo8kXtCB7JKCXApW4EkJ7nwjd\nfwNyeRQNgjbx/2hoEpG4WvsS47X+gA1NkAo7FruH/WF9hrZgs6vh9UP9bQstB5vz\n4yIOqSlXAgMBAAECggEANYies00JkDyf7XSVy5OcjzeMJUaRZR+0W2pOHvjaz6Zz\nTfxOeEMsJEpWAGZavX8kBYKDMAFBetkM5Eb3gZdELGZXr3iBK3WLVJFShJDapF1x\nmkqKduJVAHb4h9PE2vNQBhN2gNzRxrbV5Z6IdRLxEm60PWInDGebGaMPR9zmJ2D+\nkqroSURd1pmzg7DgAHExqbAz9i5EpkO9UZpToButlF/7xo7l4yhlE5BaXKc5H3YB\ntP4HmT/YjRi90rJLlsO1ivNssr0FTOVYG0hXumBmUDXJRxCeUBWidsz4yrsjfY1N\n4vefbiN6DHbGgp2uV81ZWVajCa5YRyrw+QJBPAzP5QKBgQDPiQwpB0r0KmzYdxHb\nJDQJ5RlrQzN5pCdlhiJmBfAhIDJsocBseLV+joGmdp4tf7QB7jTxKBDrpDFxIMlp\n1V3ixZFuxa4y6ArOC5EoP8p7g8jAMt/8gZ/OT9WRkMv8h231T0XVuDPR/7uWxdBc\noD6vluL0J15SZy8cpOpuIhM4PQKBgQDAn1QaI/7AUy8KSYfm2CLbQcSsVAe0d60b\nQG4IKswPJfOUexTwoTPlHyBQIgHYt+qAm8SRLOi9qKdbMJZhqEM4UknUNKsr/Sxn\nzB5fbmi9x18xctKKTyCzk6SzHNU4MIxjhco+Sk28nHSNsPtZTr76XBsnuwO+b4U8\n7pLbvljtIwKBgHFXl5yQrw7KXMebv9S+4OzGgitieCpmzF1V9FNjytFMlD1f2Ydk\nJTsI+SXAgoK2y8iCH8fU6ejHs3jlPxrdvHitDdBBhfGnaL8+8ffZXuw1/N1663ks\nEerLDwiA2+b+z765nJosD6EQ2ZJuVm0/1vxum2RcW9cFI2Wxa5baZUTBAoGBAMAf\naswz8Mk1burM0o9OLt4QKDFWEuVOpMtUpSriPOwzB1OmvAkSUGeMdzdV5A+byXsD\nYrkGWRGqYVpUCPpY0MshUGAnND/I4nyZHAZFYpU/gVQZ2aN4Lv7OGW1JKeZEjhJK\nBKHCjOy+BIa66sh2AYhHTBKBtsdABl3y+2nP3nSPAoGAadCB/U95DvYGgvfQtEKT\nDuwFhcQk14dyonHDtNbrVTdSlPIpAp8kDxpAap7dKZeZPBiR9L8EQJvEp6Ul+tES\nIAbwHxI1J/BGxMgbUZPWycEAUJcFN77TCZJtTVoxEQZL2cwxODFZ/PZO3WwS8O3x\nKh/rCTfjT+royFelfSfN1MQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "notifications@daily-news-codelab-38c48.iam.gserviceaccount.com",
+  "client_id": "105276000751220463352",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/notifications%40daily-news-codelab-38c48.iam.gserviceaccount.com"
+}
