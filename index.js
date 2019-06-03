@@ -36,7 +36,7 @@ if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
             title: "Hi I am Piyush !"
         },
         target: {
-            userId: "ABwppHHIFh3cJwbnCCyBxeh4vDAXL50fe5Hk1hDkl1RVh38oT488fs-FJD461eNQCime1POSg0nHytGY02frf0lE-OeeSsKi",
+            userId: "ABwppHHAtl_UUAh9Xkb9F7_RkPnX5DPXW8-ZfSUXi1RDBIth69aT67ozHOTecj7CUPMd2JBnZz3UeVE9RsiLlJ94YddbTfXk",
             intent: "Latest News",
             locale: "en-US"
         }
