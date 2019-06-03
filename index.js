@@ -30,29 +30,6 @@ if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 let responseObj= null;
 if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
-  jwtClient.authorize((err, tokens) => {
-    const options = {
-        userNotification: {
-            title: "Hi I am Piyush !"
-        },
-        target: {
-            userId: "ABwppHGHBaXsecjuMq7OYSd_IP5q8zVZuegLCmS54MOmlw25Y2aAGH3595_InqfHnZpO08jkNBUWMaCfaWFS30OpZhVuPurl",
-            intent: "Latest News",
-            locale: "en-US"
-        }
-    };
-    request.post("https://actions.googleapis.com/v2/conversations:send", {
-        auth: {
-            "bearer": tokens.access_token
-        },
-        json: true,
-        body: {
-            customPushMessage: options
-       }
-    }, (err, response, body) => {
-       console.log("status code : "+response.statusCode + "\nstatus : " + response.statusMessage);
-    });
-});
   responseObj=  {"payload": {
     "google": {
       "expectUserResponse": true,
