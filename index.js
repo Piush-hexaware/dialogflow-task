@@ -94,6 +94,7 @@ jwtClient.authorize((err, tokens) => {
           customPushMessage: options
      }
   }, (err, response, body) => {
+    console.log("body"+ JSON.stringify(body))
      console.log("status code : "+response.statusCode + "\nstatus : " + response.statusMessage);
      responseObj= {
       "payload": {
