@@ -32,6 +32,8 @@ let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
   return res.json( {
   "payload": {
+        "platform": "google",
+    "type": "carousel_card",
     "google": {
       "expectUserResponse": true,
       "richResponse": {
