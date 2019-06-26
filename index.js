@@ -48,7 +48,7 @@ let responseObj= null;
         "data": {
           "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
               "platform": "google",
-    "type": "carousel_card"
+    "type": "carousel_card",
           "carouselSelect": {
             "items": [
               {
