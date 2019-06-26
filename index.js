@@ -31,7 +31,7 @@ res.setHeader('Content-Type','application/json');
 let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
   return res.json( {
-  "data": {
+  "payload": {
     "google": {
       "expectUserResponse": true,
       "richResponse": {
