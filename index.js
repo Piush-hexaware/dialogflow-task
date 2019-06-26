@@ -45,10 +45,10 @@ let responseObj= null;
       },
       "systemIntent": {
         "intent": "actions.intent.OPTION",
+            "platform": "google",
+    "type": "carousel_card",
         "data": {
           "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
-              "platform": "google",
-    "type": "carousel_card",
           "carouselSelect": {
             "items": [
               {
