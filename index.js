@@ -42,7 +42,7 @@ let responseObj= null;
             "items": [
               {
                 "optionInfo": {
-                  "key": "SELECTION_KEY_ONE",
+                  "key": "1",
                   "synonyms": [
                     "synonym 1",
                     "synonym 2",
@@ -51,14 +51,14 @@ let responseObj= null;
                 },
                 "description": "This is a description of a carousel item.",
                 "image": {
-                  "url": "IMG_URL_AOG.com",
+                  "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Image alternate text"
                 },
                 "title": "Title of First Carousel Item"
               },
               {
                 "optionInfo": {
-                  "key": "SELECTION_KEY_GOOGLE_HOME",
+                  "key": "2",
                   "synonyms": [
                     "Google Home Assistant",
                     "Assistant on the Google Home"
@@ -66,14 +66,14 @@ let responseObj= null;
                 },
                 "description": "Google Home is a voice-activated speaker powered by the Google Assistant.",
                 "image": {
-                  "url": "IMG_URL_GOOGLE_HOME.com",
+                  "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Google Home"
                 },
                 "title": "Google Home"
               },
               {
                 "optionInfo": {
-                  "key": "SELECTION_KEY_GOOGLE_PIXEL",
+                  "key": "3",
                   "synonyms": [
                     "Google Pixel XL",
                     "Pixel",
@@ -82,7 +82,7 @@ let responseObj= null;
                 },
                 "description": "Pixel. Phone by Google.",
                 "image": {
-                  "url": "IMG_URL_GOOGLE_PIXEL.com",
+                  "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Google Pixel"
                 },
                 "title": "Google Pixel"
