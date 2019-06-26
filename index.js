@@ -108,7 +108,9 @@ let responseObj= null;
                 },
                 "title": "fourth"
               }
-            ]
+            ],
+                "platform": "google",
+    "type": "carousel_card"
           }
         }
       }
