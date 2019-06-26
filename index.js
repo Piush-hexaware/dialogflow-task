@@ -54,11 +54,91 @@ let responseObj= null;
                   "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Image alternate text"
                 },
-                "title": "Title of First Carousel Item"
+                "title": "Title of First Carousel Itemy"
               },
               {
                 "optionInfo": {
                   "key": "2",
+                  "synonyms": [
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
+                },
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "https://developers.google.com/actions/assistant.png",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Itemw"
+              },
+              {
+                "optionInfo": {
+                  "key": "3",
+                  "synonyms": [
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
+                },
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "https://developers.google.com/actions/assistant.png",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Itemd"
+              },
+              {
+                "optionInfo": {
+                  "key": "4",
+                  "synonyms": [
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
+                },
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "https://developers.google.com/actions/assistant.png",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Itemf"
+              },
+              {
+                "optionInfo": {
+                  "key": "5",
+                  "synonyms": [
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
+                },
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "https://developers.google.com/actions/assistant.png",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Itemc"
+              },
+              {
+                "optionInfo": {
+                  "key": "6",
+                  "synonyms": [
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
+                },
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "https://developers.google.com/actions/assistant.png",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Itemb"
+              },
+              {
+                "optionInfo": {
+                  "key": "7",
                   "synonyms": [
                     "Google Home Assistant",
                     "Assistant on the Google Home"
@@ -69,11 +149,11 @@ let responseObj= null;
                   "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Google Home"
                 },
-                "title": "Google Home"
+                "title": "Google Homea"
               },
               {
                 "optionInfo": {
-                  "key": "3",
+                  "key": "8",
                   "synonyms": [
                     "Google Pixel XL",
                     "Pixel",
@@ -85,7 +165,7 @@ let responseObj= null;
                   "url": "https://developers.google.com/actions/assistant.png",
                   "accessibilityText": "Google Pixel"
                 },
-                "title": "Google Pixel"
+                "title": "Google Pixela"
               }
             ]
           }
