@@ -47,6 +47,8 @@ let responseObj= null;
         "intent": "actions.intent.OPTION",
         "data": {
           "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
+              "platform": "google",
+    "type": "carousel_card"
           "carouselSelect": {
             "items": [
               {
@@ -108,9 +110,7 @@ let responseObj= null;
                 },
                 "title": "fourth"
               }
-            ],
-                "platform": "google",
-    "type": "carousel_card"
+            ]
           }
         }
       }
