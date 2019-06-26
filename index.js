@@ -32,93 +32,78 @@ let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
   return res.json( {
   "payload": {
-        "platform": "google",
-    "type": "carousel_card",
     "google": {
       "expectUserResponse": true,
-      "richResponse": {
-        "items": [
-          {
-            "simpleResponse": {
-              "textToSpeech": "Choose a item"
-            }
-          }
-        ]
-      },
       "systemIntent": {
         "intent": "actions.intent.OPTION",
-            "platform": "google",
-    "type": "carousel_card",
         "data": {
           "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
           "carouselSelect": {
             "items": [
               {
                 "optionInfo": {
-                  "key": "first",
+                  "key": "SELECTION_KEY_ONE",
                   "synonyms": [
-            "thing one",
-            "object one"
-          ]     },
-                "description": "first description",
-                "image": {
-                  "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-                  "accessibilityText": "first alt"
+                    "synonym 1",
+                    "synonym 2",
+                    "synonym 3"
+                  ]
                 },
-                "title": "first"
+                "description": "This is a description of a carousel item.",
+                "image": {
+                  "url": "IMG_URL_AOG.com",
+                  "accessibilityText": "Image alternate text"
+                },
+                "title": "Title of First Carousel Item"
               },
               {
                 "optionInfo": {
-                  "key": "second",
+                  "key": "SELECTION_KEY_GOOGLE_HOME",
                   "synonyms": [
-            "thg",
-            "ob"
-          ]
+                    "Google Home Assistant",
+                    "Assistant on the Google Home"
+                  ]
                 },
-                "description": "first description",
+                "description": "Google Home is a voice-activated speaker powered by the Google Assistant.",
                 "image": {
-                  "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-                  "accessibilityText": "first alt"
+                  "url": "IMG_URL_GOOGLE_HOME.com",
+                  "accessibilityText": "Google Home"
                 },
-                "title": "second"
+                "title": "Google Home"
               },
               {
                 "optionInfo": {
-                  "key": "third",
+                  "key": "SELECTION_KEY_GOOGLE_PIXEL",
                   "synonyms": [
-            "g on",
-            "ct oe"
-          ]
+                    "Google Pixel XL",
+                    "Pixel",
+                    "Pixel XL"
+                  ]
                 },
-                "description": "first description",
+                "description": "Pixel. Phone by Google.",
                 "image": {
-                  "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-                  "accessibilityText": "first alt"
+                  "url": "IMG_URL_GOOGLE_PIXEL.com",
+                  "accessibilityText": "Google Pixel"
                 },
-                "title": "third"
-              },
-              {
-                "optionInfo": {
-                  "key": "fourth",
-                  "synonyms": [
-            "piuus",
-            "jpiyu"
-          ]
-                },
-                "description": "second description",
-                "image": {
-                  "url": "https://lh3.googleusercontent.com/Nu3a6F80WfixUqf_ec_vgXy_c0-0r4VLJRXjVFF_X_CIilEu8B9fT35qyTEj_PEsKw",
-                  "accessibilityText": "second alt"
-                },
-                "title": "fourth"
+                "title": "Google Pixel"
               }
             ]
           }
         }
+      },
+      "richResponse": {
+        "items": [
+          {
+            "simpleResponse": {
+              "textToSpeech": "This is a carousel example."
+            }
+          }
+        ]
       }
     }
   }
-})  
+}
+)  
   }
 if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
   responseObj=  {"payload": {
