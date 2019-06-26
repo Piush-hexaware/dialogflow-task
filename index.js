@@ -51,8 +51,11 @@ let responseObj= null;
             "items": [
               {
                 "optionInfo": {
-                  "key": "first"
-                },
+                  "key": "first",
+                  "synonyms": [
+            "thing one",
+            "object one"
+          ]     },
                 "description": "first description",
                 "image": {
                   "url": "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
@@ -62,7 +65,11 @@ let responseObj= null;
               },
               {
                 "optionInfo": {
-                  "key": "second"
+                  "key": "second",
+                  "synonyms": [
+            "thg",
+            "ob"
+          ]
                 },
                 "description": "first description",
                 "image": {
@@ -73,7 +80,11 @@ let responseObj= null;
               },
               {
                 "optionInfo": {
-                  "key": "third"
+                  "key": "third",
+                  "synonyms": [
+            "g on",
+            "ct oe"
+          ]
                 },
                 "description": "first description",
                 "image": {
@@ -84,7 +95,11 @@ let responseObj= null;
               },
               {
                 "optionInfo": {
-                  "key": "fourth"
+                  "key": "fourth",
+                  "synonyms": [
+            "piuus",
+            "jpiyu"
+          ]
                 },
                 "description": "second description",
                 "image": {
