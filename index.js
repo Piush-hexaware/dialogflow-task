@@ -30,7 +30,7 @@ if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
-     {
+  return res.json( {
   "data": {
     "google": {
       "expectUserResponse": true,
@@ -77,7 +77,8 @@ let responseObj= null;
       }
     }
   }
-}}
+})  
+  }
 if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
   responseObj=  {"payload": {
     "google": {
