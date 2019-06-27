@@ -26,7 +26,7 @@ const jwtClient = new google.auth.JWT(
 
 
 restService.get("/attendance",function(req,res){
-console.log(req.body)
+console.log(req)
 })
 
 restService.post("/api",function(req,res){
