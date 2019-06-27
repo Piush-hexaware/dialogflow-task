@@ -26,7 +26,7 @@ const jwtClient = new google.auth.JWT(
 
 
 restService.get("/getfile",function(req,res){
-res.sendfile("__dirname"+req.queryResult+".jfif")
+res.sendfile("__dirname"+req.query+".jfif")
 })
 
 restService.post("/api",function(req,res){
