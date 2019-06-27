@@ -26,7 +26,7 @@ const jwtClient = new google.auth.JWT(
 
 
 restService.get("/attendance",function(req,res){
-res.sendfile(".\2.jfif")
+console.log(req.body)
 })
 
 restService.post("/api",function(req,res){
