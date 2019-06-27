@@ -25,7 +25,7 @@ const jwtClient = new google.auth.JWT(
 );
 
 
-restService.get("/attendance",function(req,res){
+restService.get("/getfile",function(req,res){
 res.sendfile("__dirname"+req.queryResult+".jfif")
 })
 
