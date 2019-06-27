@@ -24,6 +24,11 @@ const jwtClient = new google.auth.JWT(
   null
 );
 
+
+restService.get("/attendance",function(req,res){
+
+})
+
 restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
 if(!req.body) return res.sendStatus(400);
