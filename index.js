@@ -61,7 +61,7 @@ let responseObj= null;
                   }
                 }
               ],
-              "imageDisplayOptions": "WHITE"
+              "imageDisplayOptions": "BLACK"
             }
           }
         ]
