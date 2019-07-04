@@ -48,7 +48,9 @@ let responseObj= null;
           },
           {
             "basicCard": {
-              "title": "Card Title",
+              "title": "Title: this is a title",
+              "subtitle": "This is a subtitle",
+              "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
               "image": {
                 "url": "https://calcl-app.herokuapp.com/getfile?query=feedback.jpg",
                 "accessibilityText": "Google Logo"
@@ -61,7 +63,7 @@ let responseObj= null;
                   }
                 }
               ],
-              "imageDisplayOptions": "BLACK"
+              "imageDisplayOptions": "CROPPED"
             }
           }
         ]
