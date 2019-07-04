@@ -26,6 +26,8 @@ const jwtClient = new google.auth.JWT(
 
 
 restService.get("/getfile",function(req,res){
+  console.log("data is " + JSON.stringify(req.headers))
+  console.log("data is on " + JSON.stringify(req))
 res.sendFile(__dirname+"/"+req.query.query)
 })
 
