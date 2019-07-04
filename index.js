@@ -35,160 +35,40 @@ if(!req.body) return res.sendStatus(400);
 res.setHeader('Content-Type','application/json');
 let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
-  return res.json( {
+  return res.json({
   "payload": {
     "google": {
       "expectUserResponse": true,
-      "systemIntent": {
-        "intent": "actions.intent.OPTION",
-        "data": {
-          "@type": "type.googleapis.com/google.actions.v2.OptionValueSpec",
-          "carouselSelect": {
-            "items": [
-              {
-                "optionInfo": {
-                  "key": "1",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemy"
-              },
-              {
-                "optionInfo": {
-                  "key": "2",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemw"
-              },
-              {
-                "optionInfo": {
-                  "key": "3",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemd"
-              },
-              {
-                "optionInfo": {
-                  "key": "4",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemf"
-              },
-              {
-                "optionInfo": {
-                  "key": "5",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemc"
-              },
-              {
-                "optionInfo": {
-                  "key": "6",
-                  "synonyms": [
-                    "synonym 1",
-                    "synonym 2",
-                    "synonym 3"
-                  ]
-                },
-                "description": "This is a description of a carousel item.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Image alternate text"
-                },
-                "title": "Title of First Carousel Itemb"
-              },
-              {
-                "optionInfo": {
-                  "key": "7",
-                  "synonyms": [
-                    "Google Home Assistant",
-                    "Assistant on the Google Home"
-                  ]
-                },
-                "description": "Google Home is a voice-activated speaker powered by the Google Assistant.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Google Home"
-                },
-                "title": "Google Homea"
-              },
-              {
-                "optionInfo": {
-                  "key": "8",
-                  "synonyms": [
-                    "Google Pixel XL",
-                    "Pixel",
-                    "Pixel XL"
-                  ]
-                },
-                "description": "Pixel. Phone by Google.",
-                "image": {
-                  "url": "https://developers.google.com/actions/assistant.png",
-                  "accessibilityText": "Google Pixel"
-                },
-                "title": "Google Pixela"
-              }
-            ]
-          }
-        }
-      },
       "richResponse": {
         "items": [
           {
             "simpleResponse": {
-              "textToSpeech": "This is a carousel example."
+              "textToSpeech": "This is a Basic Card:"
+            }
+          },
+          {
+            "basicCard": {
+              "title": "Card Title",
+              "image": {
+                "url": "https://calcl-app.herokuapp.com/getfile?query=feedback.jpg",
+                "accessibilityText": "Google Logo"
+              },
+              "buttons": [
+                {
+                  "title": "Button Title",
+                  "openUrlAction": {
+                    "url": "https://www.google.com"
+                  }
+                }
+              ],
+              "imageDisplayOptions": "WHITE"
             }
           }
         ]
       }
     }
   }
-}
-)  
+})  
   }
 if(req.body.queryResult.intent.displayName == "Setup Push Notifications"){
   responseObj=  {"payload": {
