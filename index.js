@@ -26,6 +26,7 @@ const jwtClient = new google.auth.JWT(
 var fs 				= require("fs");
 
 restService.get("/getfile/:data",function(req,res){
+	console.log("inside call image"+req.params.data)
 		fs.access(__dirname+"/"+req.params.data, fs.constants.F_OK, function(err){
 			if(err){
 				console.log("inside error")
