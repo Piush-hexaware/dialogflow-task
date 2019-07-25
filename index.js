@@ -26,19 +26,27 @@ const jwtClient = new google.auth.JWT(
 var fs 				= require("fs");
 
 restService.get("/getfile/:data",function(req,res){
+	
+	
+	
+	
 	console.log("inside call image"+req.params.data)
-		fs.access(__dirname+"/"+req.params.data, fs.constants.F_OK, function(err){
-			if(err){
-				console.log("inside error")
+	
+	fs.exists(__dirname+"/"+req.params.data,function(exists){
+  if(exists){
+	  console.log("inside success")
+	  res.sendFile(__dirname+"/"+req.params.data)}
+ else {
+	 				console.log("inside error")
         res.sendFile(__dirname+"/feedback.png")
-			} else {
-							console.log("inside success")
-
-				res.sendFile(__dirname+"/"+req.params.data)
-			}
-		});
+ }
+});
 
 })
+
+
+
+
 
 restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
