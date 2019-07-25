@@ -28,9 +28,11 @@ var fs 				= require("fs");
 restService.get("/getfile/:data",function(req,res){
 		fs.access(__dirname+"/"+req.params.data, fs.constants.F_OK, function(err){
 			if(err){
+				console.log("inside error")
         res.sendFile(__dirname+"/feedback.png")
 			} else {
-			
+							console.log("inside success")
+
 				res.sendFile(__dirname+"/"+req.params.data)
 			}
 		});
