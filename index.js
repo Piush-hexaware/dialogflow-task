@@ -26,11 +26,11 @@ const jwtClient = new google.auth.JWT(
 var fs 				= require("fs");
 
 restService.get("/getfile/:data",function(req,res){
-		fs.access(url, fs.constants.F_OK, function(err){
+		fs.access(__dirname+"/"+req.params.data, fs.constants.F_OK, function(err){
 			if(err){
         res.sendFile(__dirname+"/feedback.png")
 			} else {
-				console.log("inside the success"+url)
+			
 				res.sendFile(__dirname+"/"+req.params.data)
 			}
 		});
