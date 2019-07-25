@@ -25,9 +25,9 @@ const jwtClient = new google.auth.JWT(
 );
 
 
-restService.get("/getfile",function(req,res){
+restService.get("/getfile/:data",function(req,res){
 
-res.sendFile(__dirname+"/"+req.query.query)
+res.sendFile(__dirname+"/"+req.params.data)
 })
 
 restService.post("/api",function(req,res){
@@ -53,7 +53,7 @@ let responseObj= null;
               "subtitle": "This is a subtitle",
               "formattedText": "This is a basic card.  Text in a basic card can include \"quotes\" and\n        most other unicode characters including emoji 📱.  Basic cards also support\n        some markdown formatting like *emphasis* or _italics_, **strong** or\n        __bold__, and ***bold itallic*** or ___strong emphasis___ as well as other\n        things like line  \nbreaks",
               "image": {
-                "url": "https://calcl-app.herokuapp.com/getfile?query=logout.png",
+                "url": "https://calcl-app.herokuapp.com/getfile/logout.png",
                 "accessibilityText": "Google Logo"
               },
               "buttons": [
