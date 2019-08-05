@@ -48,10 +48,9 @@ restService.get("/getfile/:data",function(req,res){
 
 restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
-if(!req.body) return res.sendStatus(400);
-res.setHeader('Content-Type','application/json');
 let responseObj= null;
   if(req.body.queryResult.intent.displayName=="Default Welcome Intent"){
+	  console.log("insisde the defaiult")
   return res.json({"payload": {
     "google": {
       "expectUserResponse": true,
