@@ -46,8 +46,6 @@ restService.get("/getfile/:data",function(req,res){
 
 
 
-
-
 restService.post("/api",function(req,res){
 console.log("received a post request"+ JSON.stringify(req.body));
 if(!req.body) return res.sendStatus(400);
